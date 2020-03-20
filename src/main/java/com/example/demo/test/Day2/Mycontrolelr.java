@@ -14,6 +14,8 @@ public class Mycontrolelr {
     public String getHello() throws InterruptedException{
         Thread.sleep(1000);
         QrCodeUtil.generate("https://www.priusis.com/", 300, 300, FileUtil.file("h:/qrcode.jpg"));
+
+
         return "hello";
     }
 }
