@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div v-if="score>=99">优秀</div>
+    <div v-else-if="score<99 && score >=80">良好</div>
+    <div v-else-if="score<80 && score >=60">一般</div>
+    <div v-else="score<60">差</div>
+</div>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            score:this.model
+        },
+        models:{}
+    })
+</script>
+</body>
+<script>
+
+</script>
+</html>

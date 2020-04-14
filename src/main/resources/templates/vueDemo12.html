@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div  v-for="(v,k,i) in obj">{{v + '----------' + k + '---------' + i}}</div>
+</div>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+    // var obj = {
+    //     uname:'lisi',
+    //     age:12,
+    //     gender:'male'
+    // };
+    // for (var key in obj){
+    //     console.log(key,obj[key])
+    // }
+    var app = new Vue({
+        el: '#app',
+        data: {
+            obj:{
+                uname:'lisi',
+                age:13,
+                gender:'male'
+            }
+        },
+        models: {}
+    })
+</script>
+</body>
+</html>
