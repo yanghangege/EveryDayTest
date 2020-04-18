@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-color="msg">
+</div>
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript">
+    /*
+    自定义指令-带参数
+     */
+
+    // Vue.directive('color',{
+    //     bind:function (el,binding) {
+    //         // console.log(binding.value.color)
+    //         el.style.backgroundColor = binding.value.color;
+    //     }
+    // })
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:{
+                color:'red'
+            }
+        },
+        methods:{
+            handle:function () {
+
+            }
+        },
+        directives:{
+            color: {
+                bind:function (el,binding) {
+                    // console.log(binding.value.color)
+                    el.style.backgroundColor = binding.value.color;
+                }
+            }
+        }
+    })
+
+</script>
+</body>
+<script>
+
+</script>
+</html>

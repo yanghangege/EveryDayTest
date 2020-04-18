@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <div>{{msg}}</div>
+    <div>{{reverseString}}</div>
+    <div>{{reverseMessage()}}</div>
+</div>
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#app',
+        data: {
+           msg:'Nihao'
+        },
+        methods:{
+            reverseMessage:function () {
+                console.log('methods');
+                return this.msg.split('').reverse().join("")
+            }
+        },
+        computed:{
+            reverseString:function () {
+                return this.msg.split('').reverse().join('')
+            }
+        }
+    })
+</script>
+</body>
+<script>
+
+</script>
+</html>
